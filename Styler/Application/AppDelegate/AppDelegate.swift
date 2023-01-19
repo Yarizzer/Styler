@@ -9,27 +9,28 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    private var router: AppRouterable?
 
-    var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        self.window = configureWindow()
+        
+        router = AppRouter()
+        
+        AppCore.shared.prepareSession()
         
         routeToInitialScene()
         
         return true
     }
     
-    func applicationDidBecomeActive(_ application: UIApplication) {}
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        AppCore.shared.runSession()
+    }
     
-    func applicationWillResignActive(_ application: UIApplication) {}
+    func applicationWillResignActive(_ application: UIApplication) {
+        AppCore.shared.closeSession()
+    }
     
-    private func routeToInitialScene() {}
-
-    private func configureWindow() -> UIWindow {
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        window.backgroundColor = .systemBackground
-        
-        return window
+    private func routeToInitialScene() {
+        self.router?.routeToInitialScene()
     }
 }
-
