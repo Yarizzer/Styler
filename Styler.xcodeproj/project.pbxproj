@@ -12,6 +12,7 @@
 		11B91A662979367B00714989 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11B91A652979367B00714989 /* Assets.xcassets */; };
 		11B91A692979367B00714989 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11B91A672979367B00714989 /* LaunchScreen.storyboard */; };
 		11B91A7629793E0400714989 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 11B91A7529793E0400714989 /* .gitignore */; };
+		11B91A7C2979456200714989 /* AppCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B91A7B2979456200714989 /* AppCore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		11B91A682979367B00714989 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11B91A6A2979367B00714989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11B91A7529793E0400714989 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		11B91A7B2979456200714989 /* AppCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				11B91A71297936E200714989 /* AppDelegate */,
+				11B91A7A2979455200714989 /* AppCore */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -102,6 +105,14 @@
 				11B91A622979367900714989 /* Styler.xcdatamodeld */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		11B91A7A2979455200714989 /* AppCore */ = {
+			isa = PBXGroup;
+			children = (
+				11B91A7B2979456200714989 /* AppCore.swift */,
+			);
+			path = AppCore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11B91A7C2979456200714989 /* AppCore.swift in Sources */,
 				11B91A5A2979367900714989 /* AppDelegate.swift in Sources */,
 				11B91A642979367900714989 /* Styler.xcdatamodeld in Sources */,
 			);
